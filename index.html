@@ -136,6 +136,29 @@
             animation: slideUp 1s ease-out 0.2s both;
         }
 
+        .subsidiary-badge {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(5px);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: slideUp 1s ease-out 0.4s both;
+        }
+
+        .subsidiary-badge strong {
+            color: #fff;
+            margin-left: 5px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #f5d742 0%, #e8b339 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         @keyframes slideUp {
             from {
                 opacity: 0;
@@ -157,7 +180,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            animation: slideUp 1s ease-out 0.4s both;
+            animation: slideUp 1s ease-out 0.6s both;
         }
 
         .cta-button:hover {
@@ -184,6 +207,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        .section h2 span.tech-accent {
+            background: linear-gradient(135deg, #f5d742 0%, #e8b339 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* Services */
@@ -221,6 +250,10 @@
             color: white;
         }
 
+        .tech-icon {
+            background: linear-gradient(135deg, #f5d742 0%, #e8b339 100%) !important;
+        }
+
         .service-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
@@ -254,6 +287,11 @@
             color: white;
             font-size: 1.2rem;
             text-align: center;
+        }
+
+        /* Ventures Section */
+        .ventures {
+            background: linear-gradient(135deg, #fefcf5 0%, #fff9e6 100%);
         }
 
         /* Contact */
@@ -351,6 +389,31 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-item img {
+            width: 20px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -361,6 +424,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#ventures">Technology</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -372,6 +436,10 @@
         <div class="hero-content">
             <h1>Integrated Business Solutions Across All Sectors</h1>
             <p>We deliver comprehensive consulting services spanning business development, financial management, agriculture, energy, oil & gas, and digital transformation for sustainable growth.</p>
+            <div class="subsidiary-badge">
+                <span>Proudly part of </span>
+                <strong>TRACEMARK VENTURES</strong> - Specializing in cutting-edge web & app development
+            </div>
             <a href="#contact" class="cta-button">Partner With Us Today</a>
         </div>
     </section>
@@ -428,6 +496,70 @@
         </div>
     </section>
 
+    <!-- TRACEMARK VENTURES Section -->
+    <section id="ventures" class="section ventures">
+        <h2>Our <span class="tech-accent">Technology</span> Division</h2>
+        <div class="services-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">💻</div>
+                <h3>Custom Web Development</h3>
+                <p>TRACEMARK VENTURES builds responsive, scalable websites with React, Next.js, and modern frameworks tailored to your business needs.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">📱</div>
+                <h3>Mobile App Development</h3>
+                <p>iOS/Android apps built with Flutter and React Native for cross-platform efficiency and native performance.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">🔐</div>
+                <h3>Blockchain Solutions</h3>
+                <p>Smart contracts, dApps, and Web3 integration services for decentralized applications.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">🤖</div>
+                <h3>AI Integration</h3>
+                <p>Machine learning models and AI-powered features to enhance your digital products.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">☁️</div>
+                <h3>Cloud Solutions</h3>
+                <p>Scalable cloud architecture and migration services using AWS, Azure, and Google Cloud.</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon tech-icon">🛡️</div>
+                <h3>Cybersecurity</h3>
+                <p>Comprehensive security audits and protection for your digital assets.</p>
+            </div>
+        </div>
+
+        <div class="tech-stack fade-in">
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"/>
+                React
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"/>
+                Next.js
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"/>
+                Flutter
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"/>
+                Node.js
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS"/>
+                AWS
+            </div>
+            <div class="tech-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" alt="Solidity"/>
+                Solidity
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="section about">
         <h2>About Us</h2>
@@ -435,16 +567,16 @@
             <div class="about-text fade-in">
                 <p>With over a decade of experience across multiple industries, TRACEMARK GLOBAL SERVICES LTD has been at the forefront of business innovation and strategic consulting. We specialize in providing comprehensive solutions across diverse sectors including agriculture, energy, oil & gas, financial services, and digital transformation.</p>
                 
-                <p>Our multidisciplinary team of expert consultants, financial analysts, agricultural specialists, and energy professionals work closely with clients to understand their unique challenges and deliver solutions that exceed expectations. We believe in building long-term partnerships and providing ongoing support to ensure your success.</p>
+                <p><strong>Technology Arm:</strong> Through our subsidiary TRACEMARK VENTURES, we deliver cutting-edge web applications, mobile apps, and digital transformation solutions to clients worldwide. Our tech division specializes in modern frameworks like React, Next.js, and Flutter, with expertise in blockchain and AI integration.</p>
                 
-                <p>From SMEs to large corporations, government agencies to international organizations, we've helped hundreds of clients across West Africa optimize their operations, manage contracts effectively, develop sustainable business strategies, and achieve their strategic objectives.</p>
+                <p>Our multidisciplinary team of expert consultants, financial analysts, agricultural specialists, and technology professionals work closely with clients to understand their unique challenges and deliver solutions that exceed expectations.</p>
                 
                 <p><strong>Leadership:</strong> Brian Nwaezike, MD/CEO, leads our vision of integrated business solutions and excellence in multi-sector service delivery across Nigeria and beyond.</p>
             </div>
             <div class="about-image fade-in">
                 <div>
                     <h3>10+ Years Experience</h3>
-                    <p>Delivering Excellence</p>
+                    <p>Delivering Excellence Across Industries</p>
                 </div>
             </div>
         </div>
@@ -467,6 +599,19 @@
                 <input type="text" id="company" name="company">
             </div>
             <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" class="form-group input">
+                    <option value="">Select a service</option>
+                    <option value="business">Business Consulting</option>
+                    <option value="finance">Financial Services</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="energy">Energy Solutions</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="app-dev">App Development</option>
+                    <option value="blockchain">Blockchain Solutions</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
@@ -487,6 +632,13 @@
                     <p style="opacity: 0.8; margin-bottom: 0.5rem;">📞 +2348056849340</p>
                     <p style="opacity: 0.8; margin-bottom: 0.5rem;">📧 info@tracemarkglobal.com</p>
                     <p style="opacity: 0.8;">📍 No 5 Iyamoye Close, Area 11 Garki, Abuja, Nigeria</p>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 1rem;">Our Subsidiaries</h4>
+                    <p style="opacity: 0.8; margin-bottom: 0.5rem;">
+                        <strong style="color:#e8b339">TRACEMARK VENTURES</strong>
+                    </p>
+                    <p style="opacity: 0.8;">Specializing in web & app development since 2020</p>
                 </div>
                 <div>
                     <h4 style="color: #fff; margin-bottom: 1rem;">Leadership</h4>
